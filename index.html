@@ -7,12 +7,13 @@
   <meta name="description" content="Nodnic. Something good is coming.">
   <style>
     html, body { margin: 0; height: 100%; }
-    /* Matches the image's own cream background, so the letterbox around it is invisible */
-    body { display: grid; place-items: center; background: #fefdf7; }
-    img { width: 100%; height: 100%; object-fit: contain; }
+    /* Matches the image's own cream background, so the space around it is invisible */
+    body { display: flex; align-items: center; justify-content: center; background: #fefdf7; }
+    /* 836px is half the image's 1672px width: sharp on 2x screens, never stretched past its own pixels */
+    img { width: min(836px, 90vw); height: auto; max-height: 90vh; object-fit: contain; }
   </style>
 </head>
 <body>
-  <img src="coming-soon.webp" alt="Nodnic: Something Good Is Coming">
+  <img src="coming-soon.png" width="1672" height="941" alt="Nodnic: Something Good Is Coming">
 </body>
 </html>
